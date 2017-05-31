@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var numbersCalled = [Int]()
     
     @IBOutlet weak var gameBallPicker: UIPickerView!
-    let bingoCard = BingoCard()
+    var bingoCard = BingoCard()
     @IBOutlet weak var bingoCardView: BingoCardView!
     @IBOutlet weak var calledNumbersLabel: UILabel!
 
@@ -34,6 +34,14 @@ class ViewController: UIViewController {
         
         updateCalledNumbersLabel()
         self.bingoCardView.reloadData()
+    }
+    
+    @IBAction func resetGame(_ sender: Any) {
+        self.bingoCard = BingoCard()
+        initializeGameBalls()
+        self.bingoCardView.setupWithBingoCard(self.bingoCard)
+        updateCalledNumbersLabel()
+
     }
     
     func updateCalledNumbersLabel() {
