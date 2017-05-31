@@ -28,7 +28,9 @@ public class BingoCard {
     public func markTileWithValue(_ value: Int) {
         for row in self.storage {
             for bingoTile in row {
-                bingoTile.marked = bingoTile.number == value
+                if value == bingoTile.number {
+                    bingoTile.marked = true
+                }
             }
         }
     }

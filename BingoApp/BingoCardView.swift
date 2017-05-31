@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BingoCardView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
+class BingoCardView: UICollectionView {
     
     var bingoCard: BingoCard?
     
@@ -20,8 +20,18 @@ class BingoCardView: UICollectionView, UICollectionViewDataSource, UICollectionV
     func didLoad() {
         self.delegate = self
         self.dataSource = self
+        self.layer.borderWidth = 1
+        
     }
     
+    func setupWithBingoCard(_ bingoCard: BingoCard) {
+        self.bingoCard = bingoCard
+        self.reloadData()
+    }
+
+}
+
+extension BingoCardView: UICollectionViewDataSource, UICollectionViewDelegate {
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return bingoCard?.storage.count ?? 0
     }
@@ -33,16 +43,9 @@ class BingoCardView: UICollectionView, UICollectionViewDataSource, UICollectionV
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bingoTileCell", for: indexPath) as! BingoTileCollectionViewCell
-        self.backgroundColor = UIColor.blue
         let bingoTile = bingoCard!.storage[indexPath.section][indexPath.item]
         
         cell.setupCellWithBingoTile(bingoTile)
         return cell
     }
-    
-    func setupWithBingoCard(_ bingoCard: BingoCard) {
-        self.bingoCard = bingoCard
-        self.reloadData()
-    }
-
 }

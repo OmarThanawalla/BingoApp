@@ -13,6 +13,14 @@ class BingoTileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberLabel: UILabel!
     
     func setupCellWithBingoTile( _ bingoTile: BingoTile) {
-        self.numberLabel.text = (bingoTile.number > 0) ? "\(bingoTile.number)" : "FREE SPACE"
+        self.numberLabel.text = (bingoTile.number > 0) ? "\(bingoTile.number)" : "FREE"
+        if bingoTile.marked {
+            self.backgroundColor = UIColor.red
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.backgroundColor = UIColor.white
     }
 }
