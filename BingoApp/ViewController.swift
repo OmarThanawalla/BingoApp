@@ -79,7 +79,9 @@ extension ViewController: BingoCardDelegate {
     
     func bingoCardDidWinBingo( _ bingoCard: BingoCard) {
         // Throw up alert view
-        // Reset game.
+        let alertController = UIAlertController(title: "Bingo!", message: "You have won Bingo", preferredStyle: UIAlertControllerStyle.alert)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

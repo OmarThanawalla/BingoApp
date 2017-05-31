@@ -42,13 +42,86 @@ public class BingoCard {
     
     
     func checkForBingo() {
+        
         // check rows
-
+        if rowsContainsBingo() {
+            notifyDelegateOfBingo()
+            return
+        }
+        
         // check columns
+        if columnsContainsBingo() {
+            notifyDelegateOfBingo()
+            return
+        }
         
         // check diagonals
+        if diagonalsContainBingo() {
+            notifyDelegateOfBingo()
+            return
+        }
+    }
+    
+    func rowsContainsBingo() -> Bool {
+        for row in self.storage {
+            if tilesContainBingo(row) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func columnsContainsBingo() -> Bool {
+        for column in 0...storage.first!.count-1 {
+            var bingoTiles = [BingoTile]()
+            for row in 0...storage.count-1 {
+                let bingoTile = storage[row][column]
+                bingoTiles.append(bingoTile)
+            }
+            if tilesContainBingo(bingoTiles) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func diagonalsContainBingo() -> Bool {
+        // First diagonal
+        var bingoTiles = [BingoTile]()
+        for index in 0...storage.count-1 {
+            let bingoTile = storage[index][index]
+            bingoTiles.append(bingoTile)
+        }
+        if tilesContainBingo(bingoTiles) {
+            return true
+        }
         
-        // if bingo, alert delegate of bingo.
+        // Second diagonal
+        bingoTiles = [BingoTile]()
+        for index in 0...storage.count-1 {
+            let bingoTile = storage[storage.count-1-index][index]
+            bingoTiles.append(bingoTile)
+        }
+        
+        if tilesContainBingo(bingoTiles) {
+            return true
+        }
+        return false
+    }
+    
+    func tilesContainBingo(_ tiles: [BingoTile]) -> Bool {
+        for tile in tiles {
+            if tile.marked == false {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func notifyDelegateOfBingo() {
+        if let delegate = self.delegate {
+            delegate.bingoCardDidWinBingo(self)
+        }
     }
     
 }
@@ -57,7 +130,7 @@ public class BingoCard {
 class BingoTile {
     var number: Int
     var marked: Bool
-    static let FreeSpace = 0 // Official Bingo numbers are 1 - 75
+    static let FreeSpace = 0 // Official Bingo numbers are 1 - 75 as per game rules.
     
     public init(number: Int, marked: Bool = false) {
         self.number = number
