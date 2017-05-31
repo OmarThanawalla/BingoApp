@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         self.bingoCardView.setupWithBingoCard(self.bingoCard)
         self.gameBallPicker.delegate = self
         self.gameBallPicker.dataSource = self
+        self.bingoCard.delegate = self
     }
 
     @IBAction func gameBallSelected(_ sender: Any) {
@@ -71,6 +72,14 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(row + 1)"
+    }
+}
+
+extension ViewController: BingoCardDelegate {
+    
+    func bingoCardDidWinBingo( _ bingoCard: BingoCard) {
+        // Throw up alert view
+        // Reset game.
     }
 }
 

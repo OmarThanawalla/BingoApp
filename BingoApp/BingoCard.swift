@@ -8,10 +8,14 @@
 
 import Foundation
 
+protocol BingoCardDelegate {
+    func bingoCardDidWinBingo( _ bingoCard: BingoCard)
+}
 
 public class BingoCard {
     
     let storage: [[BingoTile]]
+    var delegate: BingoCardDelegate?
     
     public init() {
         // Mock Bingo Card
@@ -33,27 +37,19 @@ public class BingoCard {
                 }
             }
         }
+        checkForBingo()
     }
     
-    /*
-     public func checkForBingo() -> Bool {
-     // check rows
-     for row in self.storage {
-     
-     for bingoTile in row {
-     if bingoTile.marked == false {
-     break
-     } else {
-     // if last element and true this row is the winner
-     }
-     }
-     
-     }
-     
-     // check columns
-     // check diagonals
-     }
-     */
+    
+    func checkForBingo() {
+        // check rows
+
+        // check columns
+        
+        // check diagonals
+        
+        // if bingo, alert delegate of bingo.
+    }
     
 }
 
