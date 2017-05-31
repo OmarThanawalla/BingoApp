@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let bingoCard = BingoCard()
+    @IBOutlet weak var bingoCardView: BingoCardView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.bingoCardView.setupWithBingoCard(self.bingoCard)
     }
 
 }
