@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     var numbersAvailable = [Int]()
     var numbersCalled = [Int]()
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -76,7 +76,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-extension ViewController: BingoCardDelegate {
+extension MainViewController: BingoCardDelegate {
     
     func bingoCardDidWinBingo( _ bingoCard: BingoCard) {
         // Throw up alert view

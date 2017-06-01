@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A755488A1EDF58ED0030AB56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75548891EDF58ED0030AB56 /* AppDelegate.swift */; };
-		A755488C1EDF58ED0030AB56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755488B1EDF58ED0030AB56 /* ViewController.swift */; };
+		A755488C1EDF58ED0030AB56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755488B1EDF58ED0030AB56 /* MainViewController.swift */; };
 		A755488F1EDF58ED0030AB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A755488D1EDF58ED0030AB56 /* Main.storyboard */; };
 		A75548911EDF58ED0030AB56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75548901EDF58ED0030AB56 /* Assets.xcassets */; };
 		A75548941EDF58ED0030AB56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75548921EDF58ED0030AB56 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		A75548861EDF58ED0030AB56 /* BingoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75548891EDF58ED0030AB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A755488B1EDF58ED0030AB56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A755488B1EDF58ED0030AB56 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A755488E1EDF58ED0030AB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A75548901EDF58ED0030AB56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75548931EDF58ED0030AB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				A75548891EDF58ED0030AB56 /* AppDelegate.swift */,
-				A755488B1EDF58ED0030AB56 /* ViewController.swift */,
+				A755488B1EDF58ED0030AB56 /* MainViewController.swift */,
 				A755489F1EDF686B0030AB56 /* BingoCardView.swift */,
 				A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */,
 				A755489B1EDF67A10030AB56 /* BingoCard.swift */,
@@ -150,7 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75548A01EDF686B0030AB56 /* BingoCardView.swift in Sources */,
-				A755488C1EDF58ED0030AB56 /* ViewController.swift in Sources */,
+				A755488C1EDF58ED0030AB56 /* MainViewController.swift in Sources */,
 				A75548A21EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift in Sources */,
 				A755488A1EDF58ED0030AB56 /* AppDelegate.swift in Sources */,
 				A755489C1EDF67A10030AB56 /* BingoCard.swift in Sources */,
