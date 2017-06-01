@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetGame(_ sender: Any) {
         self.bingoCard = BingoCard()
+        self.bingoCard.delegate = self
         initializeGameBalls()
         self.bingoCardView.setupWithBingoCard(self.bingoCard)
         updateCalledNumbersLabel()
@@ -79,9 +80,37 @@ extension ViewController: BingoCardDelegate {
     
     func bingoCardDidWinBingo( _ bingoCard: BingoCard) {
         // Throw up alert view
-        let alertController = UIAlertController(title: "Bingo!", message: "You have won Bingo", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Bingo!",
+                                                message: "You have won Bingo",
+                                                preferredStyle: UIAlertControllerStyle.alert)
         
+        let action = UIAlertAction(title: "Play again", style: UIAlertActionStyle.init(rawValue: 0)!) { (alert: UIAlertAction) in
+            self.resetGame("")
+        }
+        
+        alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -19,8 +19,7 @@ public class BingoCard {
     
     public init() {
         // Mock Bingo Card
-        self.storage =
-        [
+        self.storage = [
                 [BingoTile(number: 3),BingoTile(number: 29), BingoTile(number: 45),BingoTile(number: 56),BingoTile(number: 68)],
                 [BingoTile(number: 1),BingoTile(number: 19), BingoTile(number: 43),BingoTile(number: 50),BingoTile(number: 72)],
                 [BingoTile(number: 11),BingoTile(number: 25), BingoTile(number: BingoTile.FreeSpace, marked: true),BingoTile(number: 49),BingoTile(number: 61)],
