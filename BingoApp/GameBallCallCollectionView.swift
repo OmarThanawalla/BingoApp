@@ -69,6 +69,9 @@ extension GameBallCallCollectionView: UICollectionViewDataSource, UICollectionVi
     }
 }
 
+
+// I noticed similarities between GameBallCallCollectionViewCell and BingoTileCollectionViewCell.
+// With more time I would build parent class and factor common logic into there.
 class GameBallCallCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var numberLabel: UILabel!
