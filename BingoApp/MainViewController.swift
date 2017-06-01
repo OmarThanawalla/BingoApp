@@ -84,7 +84,7 @@ extension MainViewController: BingoCardDelegate {
                                                 message: "You have won Bingo",
                                                 preferredStyle: UIAlertControllerStyle.alert)
         
-        let action = UIAlertAction(title: "Play again", style: UIAlertActionStyle.init(rawValue: 0)!) { (alert: UIAlertAction) in
+        let action = UIAlertAction(title: "Play again", style: UIAlertActionStyle.default) { (alert: UIAlertAction) in
             self.resetGame("")
         }
         
