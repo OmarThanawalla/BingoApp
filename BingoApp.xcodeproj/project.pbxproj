@@ -15,6 +15,7 @@
 		A755489C1EDF67A10030AB56 /* BingoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755489B1EDF67A10030AB56 /* BingoCard.swift */; };
 		A75548A01EDF686B0030AB56 /* BingoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755489F1EDF686B0030AB56 /* BingoCardView.swift */; };
 		A75548A21EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */; };
+		A75548A41EDFA6760030AB56 /* GameBallCallCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75548A31EDFA6760030AB56 /* GameBallCallCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A755489B1EDF67A10030AB56 /* BingoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCard.swift; sourceTree = "<group>"; };
 		A755489F1EDF686B0030AB56 /* BingoCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCardView.swift; sourceTree = "<group>"; };
 		A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoTileCollectionViewCell.swift; sourceTree = "<group>"; };
+		A75548A31EDFA6760030AB56 /* GameBallCallCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBallCallCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				A75548891EDF58ED0030AB56 /* AppDelegate.swift */,
 				A755488B1EDF58ED0030AB56 /* MainViewController.swift */,
+				A75548A31EDFA6760030AB56 /* GameBallCallCollectionView.swift */,
 				A755489F1EDF686B0030AB56 /* BingoCardView.swift */,
 				A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */,
 				A755489B1EDF67A10030AB56 /* BingoCard.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75548A41EDFA6760030AB56 /* GameBallCallCollectionView.swift in Sources */,
 				A75548A01EDF686B0030AB56 /* BingoCardView.swift in Sources */,
 				A755488C1EDF58ED0030AB56 /* MainViewController.swift in Sources */,
 				A75548A21EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift in Sources */,

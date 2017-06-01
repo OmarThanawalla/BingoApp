@@ -10,70 +10,25 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var numbersAvailable = [Int]()
-    var numbersCalled = [Int]()
-    
-    @IBOutlet weak var gameBallPicker: UIPickerView!
     var bingoCard = BingoCard()
     @IBOutlet weak var bingoCardView: BingoCardView!
     @IBOutlet weak var calledNumbersLabel: UILabel!
+    @IBOutlet weak var gameBallCollectionView: GameBallCallCollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeGameBalls()
         self.bingoCardView.setupWithBingoCard(self.bingoCard)
-        self.gameBallPicker.delegate = self
-        self.gameBallPicker.dataSource = self
         self.bingoCard.delegate = self
-    }
-
-    @IBAction func gameBallSelected(_ sender: Any) {
-        let selectedGameBall = self.gameBallPicker.selectedRow(inComponent: 0)+1
-        
-        numbersCalled.append(selectedGameBall)
-        self.bingoCard.markTileWithValue(selectedGameBall)
-        
-        updateCalledNumbersLabel()
-        self.bingoCardView.reloadData()
+        self.gameBallCollectionView.gameBallCollectionViewDelegate = self
     }
     
     @IBAction func resetGame(_ sender: Any) {
         self.bingoCard = BingoCard()
         self.bingoCard.delegate = self
-        initializeGameBalls()
         self.bingoCardView.setupWithBingoCard(self.bingoCard)
-        updateCalledNumbersLabel()
-
+        self.gameBallCollectionView.resetGameBalls()
     }
     
-    func updateCalledNumbersLabel() {
-        var calledNumbersString = ""
-        for calledGameBall in numbersCalled {
-            calledNumbersString = calledNumbersString + "\(calledGameBall), "
-        }
-        self.calledNumbersLabel.text = calledNumbersString
-    }
-    
-    func initializeGameBalls() {
-        numbersAvailable = [Int]()
-        numbersCalled = [Int]()
-        for number in 1...75 {
-            numbersAvailable.append(number)
-        }
-    }
-}
-
-extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return numbersAvailable.count
-    }
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row + 1)"
-    }
 }
 
 extension MainViewController: BingoCardDelegate {
@@ -90,6 +45,14 @@ extension MainViewController: BingoCardDelegate {
         
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+extension MainViewController: GameBallCollectionViewDelegate {
+    
+    func gameBallCollectionViewDidSelectGameBallTile(_ gameBall: GameBallTile) {
+        self.bingoCard.markTileWithValue(gameBall.number)
+        self.bingoCardView.reloadData()
     }
 }
 
