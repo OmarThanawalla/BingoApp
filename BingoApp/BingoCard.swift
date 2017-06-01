@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol BingoCardDelegate {
+protocol BingoCardDelegate: class {
     func bingoCardDidWinBingo( _ bingoCard: BingoCard)
 }
 
 public class BingoCard {
     
     let storage: [[BingoTile]]
-    var delegate: BingoCardDelegate?
+    weak var delegate: BingoCardDelegate?
     
     public init() {
         // Mock Bingo Card

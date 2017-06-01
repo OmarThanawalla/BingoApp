@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol GameBallCollectionViewDelegate {
+protocol GameBallCollectionViewDelegate: class {
     func gameBallCollectionViewDidSelectGameBallTile(_ gameBall: GameBallTile)
 }
 
 class GameBallCallCollectionView: UICollectionView {
     
-    var gameBallCollectionViewDelegate: GameBallCollectionViewDelegate?
+    weak var gameBallCollectionViewDelegate: GameBallCollectionViewDelegate?
     var gameBallTiles = [GameBallTile]()
     
     required init?(coder aDecoder: NSCoder) {
