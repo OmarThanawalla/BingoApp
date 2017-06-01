@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,20 +60,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Numbers called:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6o-JW-pia">
-                                <rect key="frame" x="37" y="348" width="124.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntm-Br-eWg">
-                                <rect key="frame" x="169" y="348" width="168" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyv-pQ-Xb8">
-                                <rect key="frame" x="0.0" y="415" width="375" height="36"/>
+                                <rect key="frame" x="0.0" y="345" width="375" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Ball Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-YV-qP3">
                                         <rect key="frame" x="129.5" y="7" width="116.5" height="21"/>
@@ -102,7 +89,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pKU-rt-q5N" customClass="GameBallCallCollectionView" customModule="BingoApp" customModuleProvider="target">
-                                <rect key="frame" x="10" y="461" width="355" height="196"/>
+                                <rect key="frame" x="10" y="391" width="355" height="266"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W0l-lm-HbG">
                                     <size key="itemSize" width="50" height="50"/>
@@ -139,17 +126,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="B6o-JW-pia" firstAttribute="top" secondItem="OFl-o1-x4r" secondAttribute="bottom" constant="23" id="8u4-Fd-QcQ"/>
-                            <constraint firstItem="nyv-pQ-Xb8" firstAttribute="top" secondItem="B6o-JW-pia" secondAttribute="bottom" constant="46" id="Daa-9I-RiE"/>
-                            <constraint firstItem="Ntm-Br-eWg" firstAttribute="leading" secondItem="B6o-JW-pia" secondAttribute="trailing" constant="7.5" id="GLP-U3-bwW"/>
                             <constraint firstItem="OFl-o1-x4r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="LIE-1j-bz0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pKU-rt-q5N" secondAttribute="bottom" constant="10" id="M3G-ku-eb1"/>
-                            <constraint firstItem="Ntm-Br-eWg" firstAttribute="top" secondItem="OFl-o1-x4r" secondAttribute="bottom" constant="23" id="P4H-WT-vg4"/>
                             <constraint firstItem="pKU-rt-q5N" firstAttribute="top" secondItem="nyv-pQ-Xb8" secondAttribute="bottom" constant="10" id="RA9-lS-EdX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ntm-Br-eWg" secondAttribute="trailing" constant="22" id="Xs4-NX-mYO"/>
-                            <constraint firstItem="B6o-JW-pia" firstAttribute="leading" secondItem="OFl-o1-x4r" secondAttribute="leading" id="gW6-Gb-dcY"/>
                             <constraint firstItem="pKU-rt-q5N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="jJp-Hg-g8V"/>
                             <constraint firstAttribute="trailing" secondItem="nyv-pQ-Xb8" secondAttribute="trailing" id="kbf-3W-4u0"/>
+                            <constraint firstItem="nyv-pQ-Xb8" firstAttribute="top" secondItem="OFl-o1-x4r" secondAttribute="bottom" constant="20" id="kje-fi-7Rn"/>
                             <constraint firstAttribute="trailing" secondItem="pKU-rt-q5N" secondAttribute="trailing" constant="10" id="l9j-0T-a2V"/>
                             <constraint firstItem="nyv-pQ-Xb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mhx-wY-SQC"/>
                             <constraint firstItem="OFl-o1-x4r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pP4-BK-jyj"/>
@@ -157,7 +139,6 @@
                     </view>
                     <connections>
                         <outlet property="bingoCardView" destination="OFl-o1-x4r" id="8qQ-Xq-Wwj"/>
-                        <outlet property="calledNumbersLabel" destination="Ntm-Br-eWg" id="UeB-H1-yRH"/>
                         <outlet property="gameBallCollectionView" destination="pKU-rt-q5N" id="OGU-74-JjI"/>
                     </connections>
                 </viewController>

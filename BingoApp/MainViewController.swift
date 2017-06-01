@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
     
     var bingoCard = BingoCard()
     @IBOutlet weak var bingoCardView: BingoCardView!
-    @IBOutlet weak var calledNumbersLabel: UILabel!
     @IBOutlet weak var gameBallCollectionView: GameBallCallCollectionView!
 
     override func viewDidLoad() {
