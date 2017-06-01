@@ -5,6 +5,13 @@
 //  Created by Omar Thanawalla on 5/31/17.
 //  Copyright © 2017 Omar Thanawalla. All rights reserved.
 //
+//
+/*
+    Stated Assumptions about Bingo:
+    1. 5x5 Bingo Board, Official Bingo Board Size
+    2. Bingo Numbers are 1-75
+    3. Bingo Numbers do not repeat on Bingo Card
+*/
 
 import UIKit
 
