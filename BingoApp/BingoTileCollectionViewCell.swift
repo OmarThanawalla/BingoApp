@@ -19,6 +19,11 @@ class BingoTileCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = 25
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         self.backgroundColor = UIColor.white
