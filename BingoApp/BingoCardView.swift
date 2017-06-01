@@ -21,7 +21,7 @@ class BingoCardView: UICollectionView {
         self.delegate = self
         self.dataSource = self
         self.layer.borderWidth = 1
-        
+        self.layer.cornerRadius = 6
     }
     
     func setupWithBingoCard(_ bingoCard: BingoCard) {
