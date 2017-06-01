@@ -13,7 +13,6 @@
 		A75548911EDF58ED0030AB56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75548901EDF58ED0030AB56 /* Assets.xcassets */; };
 		A75548941EDF58ED0030AB56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75548921EDF58ED0030AB56 /* LaunchScreen.storyboard */; };
 		A755489C1EDF67A10030AB56 /* BingoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755489B1EDF67A10030AB56 /* BingoCard.swift */; };
-		A755489E1EDF67C50030AB56 /* BingoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755489D1EDF67C50030AB56 /* BingoGame.swift */; };
 		A75548A01EDF686B0030AB56 /* BingoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755489F1EDF686B0030AB56 /* BingoCardView.swift */; };
 		A75548A21EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		A75548931EDF58ED0030AB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75548951EDF58ED0030AB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A755489B1EDF67A10030AB56 /* BingoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCard.swift; sourceTree = "<group>"; };
-		A755489D1EDF67C50030AB56 /* BingoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoGame.swift; sourceTree = "<group>"; };
 		A755489F1EDF686B0030AB56 /* BingoCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoCardView.swift; sourceTree = "<group>"; };
 		A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoTileCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +65,6 @@
 				A755489F1EDF686B0030AB56 /* BingoCardView.swift */,
 				A75548A11EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift */,
 				A755489B1EDF67A10030AB56 /* BingoCard.swift */,
-				A755489D1EDF67C50030AB56 /* BingoGame.swift */,
 				A755488D1EDF58ED0030AB56 /* Main.storyboard */,
 				A75548901EDF58ED0030AB56 /* Assets.xcassets */,
 				A75548921EDF58ED0030AB56 /* LaunchScreen.storyboard */,
@@ -154,7 +151,6 @@
 				A75548A21EDF6CB10030AB56 /* BingoTileCollectionViewCell.swift in Sources */,
 				A755488A1EDF58ED0030AB56 /* AppDelegate.swift in Sources */,
 				A755489C1EDF67A10030AB56 /* BingoCard.swift in Sources */,
-				A755489E1EDF67C50030AB56 /* BingoGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

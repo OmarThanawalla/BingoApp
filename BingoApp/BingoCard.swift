@@ -39,9 +39,7 @@ public class BingoCard {
         checkForBingo()
     }
     
-    
     func checkForBingo() {
-        
         // check rows
         if rowsContainsBingo() {
             notifyDelegateOfBingo()
@@ -124,7 +122,6 @@ public class BingoCard {
     }
     
 }
-
 
 class BingoTile {
     var number: Int
